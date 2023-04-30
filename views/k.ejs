@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .conatiner h1{
+      position: relative;
+      
+    
+    }
+    .card img{
+      height: 200px;
+      width: 100%;
+
+   
+    }
+    .incard{
+      transition-duration: 400ms;
+    }
+    .incard:hover{
+      /* border: 2px solid red; */
+      scale: 1.05;
+
+    }
+    
+    .anchor{
+      width: auto;
+    }
+    
+    
+  </style>
+  <link rel="stylesheet" href="p.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" href="k.js">
+  </head>
+</head>
+<body style="background-color: aliceblue;">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="logo.png" alt="" style="width: 74px;
+        height: 51px;
+        border-radius: 46px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+<!-- body /=----------- -->
+<div class="container">
+  <h1 style="margin: 40px 69px;
+  padding: 8px 1px;">Dilevries in india</h1>
+</div>
+<div class="cardsmy" style="height: auto;">
+<div class="row row-cols-1 row-cols-md-2 g-4" style="padding: 29px 141px;">
+  <% data.forEach((element)=> { %>
+   
+  <div class="col" style="width: 33%;">
+    <a href="/dilevery/<%=element.Foodname%>/<%=type%>" style="text-decoration: none;">
+    <div class="incard">
+    <div class="card crad1">
+      <img src= <%= element.Imagelink %> class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%=element.Foodname%></h5>
+        <p class="card-text"><%=element.Quotes%></p>
+      </div>
+    </div>
+    </div>
+  </a>
+  </div>
+
+  <% }) %> 
+
+</div>
+</div>
+<!-- End of search =----------- -->
+<div class="endofsearch" style="height: 200px;display: flex; margin: 20px;">
+  <h1 style="padding-left: 30%;
+  padding-top: 30px;">End of search result</h1>
+  <img src="house.png" alt="" style="width: 60px;
+  height: 60px;
+ 
+  margin-top: 19px;
+  margin-left: 41px;">
+</div>
+<h1 style="padding-left: 14%;">Explore Options near me</h1>
+<div class="acordatin" style="display: flex;
+justify-content: center;margin: 20px;" >
+  <div class="accordion accordion-flush" id="accordionFlushExample" style="width: 75%;">
+    <div class="accordion-item" style="padding: 5px 0px;
+    margin: 3px 0px;
+    border: 1px solid;
+    border-radius: 10px;" >
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+       Popular cusines near me
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Mike Garten.
+          Roasted Kale and Mushrooms.
+          Sticky Tofu Bowl.
+          Spice-Roasted Cauliflower with Green Beans.
+          Balsamic Roasted Red Onions.
+          Spicy Taco Slaw.
+          Vegan Apple Cake.
+          Marinated Mushrooms.</div>
+      </div>
+    </div>
+    <div class="accordion-item" style="padding: 5px 0px;
+    margin: 3px 0px;
+    border: 1px solid;
+    border-radius: 10px;">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Popular restaurant types near me
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Rose Cafe, Delhi.           Kitchen Garden by Suzette, Mumbai. ...
+          Wabi Sabi, Kolkata.           Bean Me Up, Goa.           The Real Green Kitchen, Pune.
+          The Terrassen Café, Hyderabad.           Carrots, Bengaluru.           Greenr Cafe, Gurugram.</div>
+      </div>
+    </div>
+    <div class="accordion-item" style="padding: 5px 0px;
+    margin: 3px 0px;
+    border: 1px solid;
+    border-radius: 10px;">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Cities We Deliver To
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Delhi. 
+          Bangalore. 
+          Kolkata. 
+          Chennai. 
+          Ahemdabad. 
+          Hyderabad. 
+          Pune.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- footer ------[] -->
+<footer class="footer" style="background-color: rgb(255, 255, 255); ">
+  <div class="container bottom_border">
+  <div class="row">
+  <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+  <h5 class="headin5_amrc col_white_amrc pt2" style="color: black;">Find us</h5>
+  <!--headin5_amrc-->
+  <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+  <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+  <p><i class="fa fa-phone"></i>  +91-9999878398  </p>
+  <p><i class="fa fa fa-envelope"></i> info@example.com  </p>
+  
+  
+  </div>
+  
+  
+  <div class=" col-sm-4 col-md  col-6 col">
+  <h5 class="headin5_amrc col_white_amrc pt2" style="color: black;">Quick links</h5>
+  <!--headin5_amrc-->
+  <ul class="footer_ul_amrc">
+  <li ><a href="http://webenlance.com" style="color: gray;" >Image Rectoucing</a></li>
+  <li ><a href="http://webenlance.com" style="color: gray;" >Clipping Path</a></li>
+  <li ><a href="http://webenlance.com" style="color: gray;" >Hollow Man Montage</a></li>
+  <li ><a href="http://webenlance.com" style="color: gray;" >Ebay & Amazon</a></li>
+  <li ><a href="http://webenlance.com" style="color: gray;" >Hair Masking/Clipping</a></li>
+  <li ><a href="http://webenlance.com" style="color: gray;" >Image Cropping</a></li>
+  </ul>
+  <!--footer_ul_amrc ends here-->
+  </div>
+  
+  
+  <div class=" col-sm-4 col-md  col-6 col">
+  <h5 class="headin5_amrc col_white_amrc pt2" style="color: black;">Quick links</h5>
+  <!--headin5_amrc-->
+  <ul class="footer_ul_amrc">
+  <li><a href="http://webenlance.com"  style="color: gray;">Remove Background</a></li>
+  <li><a href="http://webenlance.com"  style="color: gray;">Shadows & Mirror Reflection</a></li>
+  <li><a href="http://webenlance.com"  style="color: gray;">Logo Design</a></li>
+  <li><a href="http://webenlance.com"  style="color: gray;">Vectorization</a></li>
+  <li><a href="http://webenlance.com"  style="color: gray;">Hair Masking/Clipping</a></li>
+  <li><a href="http://webenlance.com"  style="color: gray;">Image Cropping</a></li>
+  </ul>
+  <!--footer_ul_amrc ends here-->
+  </div>
+  
+  
+  <div class=" col-sm-4 col-md  col-12 col">
+  <h5 class="headin5_amrc col_white_amrc pt2" style="color: black;">Follow us</h5>
+  <!--headin5_amrc ends here-->
+  
+  <ul class="footer_ul2_amrc" style="color: rgb(70, 70, 70);">
+  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+  <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a><p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p></li>
+  </ul>
+  <!--footer_ul2_amrc ends here-->
+  </div>
+  </div>
+  </div>
+  
+  
+  <div class="container">
+  <ul class="foote_bottom_ul_amrc">
+  <li><a href="http://webenlance.com">Home</a></li>
+  <li><a href="http://webenlance.com">About</a></li>
+  <li><a href="http://webenlance.com">Services</a></li>
+  <li><a href="http://webenlance.com">Pricing</a></li>
+  <li><a href="http://webenlance.com">Blog</a></li>
+  <li><a href="http://webenlance.com">Contact</a></li>
+  </ul>
+  <!--foote_bottom_ul_amrc ends here-->
+  <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+  
+  <ul class="social_footer_ul">
+  <li><a href="http://webenlance.com"><i class="fab fa-facebook-f"></i></a></li>
+  <li><a href="http://webenlance.com"><i class="fab fa-twitter"></i></a></li>
+  <li><a href="http://webenlance.com"><i class="fab fa-linkedin"></i></a></li>
+  <li><a href="http://webenlance.com"><i class="fab fa-instagram"></i></a></li>
+  </ul>
+  <!--social_footer_ul ends here-->
+  </div>
+  
+  </footer>
+  
+</body>
+</html>
